@@ -1,10 +1,11 @@
 import React from 'react';
-import { Shield, BadgeCheck, FileText, Lock, Activity, Layers } from 'lucide-react';
+import { BadgeCheck, FileText, Lock, Activity, Layers } from 'lucide-react';
+import ShieldIcon from '../ui/shield-icon';
 import { features } from '../../mockData';
 import '../../styles/FeaturesSection.css';
 
 const iconMap = {
-  Shield: Shield,
+  Shield: ShieldIcon,
   BadgeCheck: BadgeCheck,
   FileText: FileText,
   Lock: Lock,
@@ -17,7 +18,7 @@ const FeaturesSection = () => {
     <section className="features-section" id="features">
       <div className="section-container">
         <div className="section-header animate-on-scroll">
-          <h2 className="section-title">Powerful Features</h2>
+          <h2 className="section-title">Features</h2>
           <p className="section-subtitle">
             Everything you need to verify media authenticity with confidence
           </p>

@@ -21,8 +21,8 @@ export const features = [
   },
   {
     id: 4,
-    title: "Secure JWT Authentication",
-    description: "Enterprise-grade security with JWT-based authentication and encryption.",
+    title: "Secure & Private",
+    description: "Enterprise-grade security with end-to-end encryption and data protection.",
     icon: "Lock"
   },
   {

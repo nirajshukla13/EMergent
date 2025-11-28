@@ -1,10 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import React, { useEffect } from 'react';
 import HeroSection from './sections/HeroSection';
 import FeaturesSection from './sections/FeaturesSection';
-import DemoSection from './sections/DemoSection';
 import HowItWorksSection from './sections/HowItWorksSection';
-import TestimonialsSection from './sections/TestimonialsSection';
 import Footer from './sections/Footer';
 import Header from './sections/Header';
 import '../styles/HomePage.css';
@@ -36,9 +33,7 @@ const HomePage = () => {
       <Header />
       <HeroSection />
       <FeaturesSection />
-      <DemoSection />
       <HowItWorksSection />
-      <TestimonialsSection />
       <Footer />
     </div>
   );

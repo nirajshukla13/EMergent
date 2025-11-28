@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import ShieldIcon from '../ui/shield-icon';
 import '../../styles/HeroSection.css';
 
 const HeroSection = () => {
@@ -13,11 +14,6 @@ const HeroSection = () => {
       </div>
       
       <div className="hero-content">
-        <div className="hero-badge animate-fade-in">
-          <span className="badge-dot"></span>
-          AI-Powered Verification
-        </div>
-        
         <h1 className="hero-title animate-fade-in-up">
           Verify Media Instantly
           <br />
@@ -34,10 +30,6 @@ const HeroSection = () => {
           <button className="btn-primary-large">
             Get Started
             <ArrowRight size={20} />
-          </button>
-          <button className="btn-secondary-large">
-            <Play size={18} />
-            Try a Demo
           </button>
         </div>
 

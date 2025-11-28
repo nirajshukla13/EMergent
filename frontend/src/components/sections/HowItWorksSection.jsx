@@ -44,14 +44,6 @@ const HowItWorksSection = () => {
             );
           })}
         </div>
-
-        <div className="cta-section animate-on-scroll">
-          <h3 className="cta-title">Ready to start verifying?</h3>
-          <button className="btn-primary-large">
-            Start Free Trial
-            <ArrowRight size={20} />
-          </button>
-        </div>
       </div>
     </section>
   );

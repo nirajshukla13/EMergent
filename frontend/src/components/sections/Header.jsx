@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield } from 'lucide-react';
+import ShieldIcon from '../ui/shield-icon';
 import '../../styles/Header.css';
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
     <header className={`verihub-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo">
-          <Shield className="logo-icon" size={32} />
+          <ShieldIcon className="logo-icon" size={32} />
           <span className="logo-text">VeriHub</span>
         </div>
         
@@ -27,11 +27,6 @@ const Header = () => {
           <a href="#demo" className="nav-link">Demo</a>
           <a href="#pricing" className="nav-link">Pricing</a>
         </nav>
-
-        <div className="header-actions">
-          <button className="btn-secondary-header">Login</button>
-          <button className="btn-primary-header">Get Started</button>
-        </div>
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 /* Demo Section CSS */
 .demo-section {
-  background: #000000;
+  background: #0D1117;
   position: relative;
 }
 
@@ -11,14 +11,14 @@
 
 .demo-frame {
   position: relative;
-  background: rgba(10, 10, 15, 0.8);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   border-radius: 20px;
   padding: 32px;
   box-shadow: 
-    0 0 0 1px rgba(99, 102, 241, 0.1),
-    0 20px 60px rgba(99, 102, 241, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 0 0 1px rgba(37, 99, 235, 0.1),
+    0 20px 60px rgba(37, 99, 235, 0.2),
+    inset 0 1px 0 rgba(245, 247, 250, 0.05);
   backdrop-filter: blur(20px);
   animation: floatDemo 6s ease-in-out infinite;
 }
@@ -35,7 +35,7 @@
 .demo-glow {
   position: absolute;
   inset: -100px;
-  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
   filter: blur(60px);
   pointer-events: none;
   z-index: -1;
@@ -108,7 +108,7 @@
 .stat-mini-value {
   font-size: 20px;
   font-weight: 700;
-  color: #8B5CF6;
+  color: #2563EB;
 }
 
 /* Demo Table */
@@ -124,7 +124,7 @@
   grid-template-columns: 1fr 2fr 1.5fr 1.5fr 1fr;
   gap: 16px;
   padding: 16px 24px;
-  background: rgba(99, 102, 241, 0.05);
+  background: rgba(37, 99, 235, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -159,7 +159,7 @@
 
 .table-row:hover,
 .table-row.hovered {
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(37, 99, 235, 0.08);
   transform: translateX(4px);
 }
 
@@ -181,7 +181,7 @@
 }
 
 .file-icon {
-  color: #8B5CF6;
+  color: #2563EB;
   flex-shrink: 0;
 }
 

@@ -1,0 +1,166 @@
+/* Verification Animation Container */
+.verification-animation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Rotating Rings */
+.verification-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  opacity: 0.6;
+}
+
+.ring-outer {
+  width: 100%;
+  height: 100%;
+  border-top-color: #2563EB;
+  border-right-color: #2563EB;
+  animation: rotateClockwise 8s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
+}
+
+.ring-middle {
+  width: 70%;
+  height: 70%;
+  border: 2px solid #2563EB;
+  opacity: 0.4;
+  animation: pulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.3));
+}
+
+.ring-inner {
+  width: 40%;
+  height: 40%;
+  border-bottom-color: #2563EB;
+  border-left-color: #2563EB;
+  animation: rotateCounterClockwise 6s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.5));
+}
+
+/* Scanning Lines */
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(37, 99, 235, 0) 20%,
+    rgba(37, 99, 235, 0.8) 50%, 
+    rgba(37, 99, 235, 0) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+  animation: scan 4s ease-in-out infinite;
+}
+
+.scan-line-1 {
+  animation-delay: 0s;
+}
+
+.scan-line-2 {
+  animation-delay: 2s;
+  transform: rotate(90deg);
+}
+
+/* Center Glow */
+.center-glow {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* Verification Symbol */
+.verification-symbol {
+  position: absolute;
+  width: 24%;
+  height: 24%;
+  color: #F5F7FA;
+  filter: drop-shadow(0 0 4px rgba(245, 247, 250, 0.8));
+  animation: symbolFloat 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+.verification-symbol svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Animations */
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.6;
+  }
+}
+
+@keyframes scan {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50%) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes symbolFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.05);
+  }
+}
+
+/* Performance optimization */
+.verification-animation * {
+  will-change: transform, opacity;
+}
