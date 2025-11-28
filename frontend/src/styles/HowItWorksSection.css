@@ -1,0 +1,192 @@
+/* How It Works Section CSS */
+.how-it-works-section {
+  background: linear-gradient(180deg, #0a0a0f 0%, #000000 100%);
+  position: relative;
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.step-card {
+  position: relative;
+  flex: 1;
+  max-width: 350px;
+  padding: 48px 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  background: rgba(99, 102, 241, 0.05);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25);
+}
+
+.step-card:hover::before {
+  opacity: 1;
+}
+
+.step-number {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+.step-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 2px solid rgba(99, 102, 241, 0.2);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  transition: all 0.4s ease;
+}
+
+.step-card:hover .step-icon-wrapper {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+.step-icon {
+  color: #8B5CF6;
+  transition: all 0.4s ease;
+}
+
+.step-card:hover .step-icon {
+  color: #A78BFA;
+  filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.8));
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.step-description {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+.step-glow {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.step-card:hover .step-glow {
+  opacity: 1;
+  bottom: -30%;
+}
+
+.step-arrow {
+  color: rgba(99, 102, 241, 0.4);
+  flex-shrink: 0;
+  animation: pulse-arrow 2s ease-in-out infinite;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes pulse-arrow {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(8px);
+    opacity: 0.8;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.cta-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .steps-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .step-card {
+    max-width: 100%;
+  }
+  
+  .cta-section {
+    padding: 40px 24px;
+  }
+  
+  .cta-title {
+    font-size: 24px;
+  }
+}
