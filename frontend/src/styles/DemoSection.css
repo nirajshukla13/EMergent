@@ -146,10 +146,11 @@
   gap: 16px;
   padding: 20px 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   animation: fadeInUp 0.4s ease-out forwards;
   opacity: 0;
+  will-change: auto;
 }
 
 .table-row:last-child {
